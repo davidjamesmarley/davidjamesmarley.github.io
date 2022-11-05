@@ -8,9 +8,11 @@
 #includes_dir        : _includes
 #sass:
 #  sass_dir: _sass
-#collections:
+collections:
 #  posts:
 #    output          : true
+  authors:
+    output: true
 
 # Handling Reading
 #safe                : false
@@ -69,3 +71,19 @@
 #  hard_wrap         : false
 #  footnote_nr       : 1
 #  show_warnings     : false
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
